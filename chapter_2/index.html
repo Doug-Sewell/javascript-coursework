@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <h1>Chapter 2 Notes</h1>
+    <h2>JS Data Types</h2>
+    <ul>
+        <li>String => 1,2,3,100,3.14</li>
+        <li>Boolean => 'hello, world'</li>
+        <li>Null => true / false</li>
+        <li>Undefined => Explicitly set variable with no value.</li>
+        <li>Object => Complex data structures such as Arrays, Dates, Literals, and more.</li>
+        <li>Symbol => Used with objects</li>
+    </ul>
+
+    <h2>Difference Between Functions &amp; Methods</h2>
+    <ul>
+        <li>A function performs a specific task.</li>
+        <li>A method is a function associated with a particular object or data type.</li>
+    </ul>
+    <h2>Common String methods</h2>
+<ul>
+    <li><code>string.toLowercase();</code> => returns the string in lowercase letters.</li>
+    <li><code>string.indexOf('@');</code> => returns the index within the string of the requested character. </li>
+    <li><code>string.lastIndexOf('@');</code> => Returns the index of the last instance of a requested character. </li>
+    <li><code>string.slice(0,5); =></code> Slice takes in the starting index, and ending index of the portion of hte string you want.</li>
+    <li><code>string.substr(0,10);</code> => Similar to slice, but this one takes in the starting position, and the second parameter is for how many spots you want to move forward. <em>Not</em> the index.</li>
+    <li><code>string.replace('m','w');</code> => Replaces the first instance of the supplied substring with the second parameter</li>
+</ul>
+
     <script src="sandbox.js"></script>
 </body>
 </html>
