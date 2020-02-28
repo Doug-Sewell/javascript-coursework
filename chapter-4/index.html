@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Functions &amp; Expressions</h1>
+    <h2>Function Declaration:</h2>
+    <code>
+        function printThis() { <br />
+            console.log('Hello!'); <br />
+        }
+    </code>
+    <h2>Function Expression</h2>
+    <code>
+        const thisWillPrint = () => { <br />
+            console.log('This will print.'); <br />
+        }
+    </code>
+    <h2>Difference Between Function Declarations and Function Expressions</h2>
+    <p>Function Declarations get hoisted. Function expressions do not.</p>
+
+    <h3>Concept of Hoisting</h3>
+    <p>With hoisting, the idea is that regardless of where you declare your functions, they get "hoisted" to the top.
+        What this means is you could call your function at the top of your code, but declare your function below it.
+        This is <strong>not</strong> true
+        of function expressions.
+    </p>
+    <h4>Examples:</h4>
+    <pre><code>
+printThis();
+
+function printThis() {
+    console.log('This will work.');
+}
+
+
+thisWont();
+
+const thisWont = () => {
+    console.log('This will not print.');
+}</code></pre>
+<p>
+    In the example above, the function declaration works because it is hoisted above the fuction call.
+    The function expression does not get hoisted, and thus prints an error to the console.
+    Function expressions tend to be more popular, and the convention is to declare your function 
+    expressions at the top of your code.
+</p>
+    <script src="sandbox.js"></script>
+</body>
+
+</html>

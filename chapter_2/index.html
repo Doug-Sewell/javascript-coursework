@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Chapter 2 Notes</title>
 </head>
 
 <body>
@@ -40,6 +40,8 @@
             second parameter is for how many spots you want to move forward. <em>Not</em> the index.</li>
         <li><code>string.replace('m','w');</code> => Replaces the first instance of the supplied substring with the
             second parameter</li>
+        <li><code>someArray.includes('SomeValue');</code> => If the value is one of the values in an array, it will
+            return true. (Otherwise, false.)</li>
     </ul>
     <h2>Common Array Methods</h2>
     <p>Let's pretend we have an array.<br />
@@ -59,8 +61,28 @@
     </p>
     <p>Methods that alter the original values are called destructive values. </p>
     <p>And since we mentioned push(), let's do pop().</p>
-    <p><code> lastNum = someArray.pop();</code> //Now someArray has the original values and lastNum has a value of 82 which was added a few lines up.</code>
+    <p><code> lastNum = someArray.pop();</code> //Now someArray has the original values and lastNum has a value of 82
+        which was added a few lines up.</code>
     </p>
+    <h2>String Methods</h2>
+    <ul>
+        <li><code>someString.includes('some character(s)');</code> => returns true/fasle. Can be any part of the string.
+        </li>
+    </ul>
+    <h2>Type Conversion</h2>
+    <ul>
+        <li>Convert a value to a number: <code>Number("50");</code> <br /> Note - If you put a String into the Number
+            method, then it returns NaN.</li>
+        <li>Convert a number into a String: <code>String(50);</code></li>
+        <li>Convert a value into a Boolean: <code>Boolean(50);</code></li>
+    </ul>
+    <p>Note you can get the type of value using the following syntax:<br />
+        <code>console.log(typeof someValue);</code></p>
+    <h2>Truthy/Falsey Values</h2>
+    <li>Strings are truthy: <code>"hello"</code></li>
+    <li>Empty strings are false: <code>""</code></li>
+    <li>Numbers are truthy. <code>47</code></li>
+    <li>Zero is falsey. <code>0</code></li>
     <script src="sandbox.js"></script>
 </body>
 

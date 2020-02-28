@@ -77,3 +77,8 @@ console.log(someArray); //This will print the updated array which is someArray f
 let lastNum = someArray.pop(); //Now someArray is the original values and lastNum has a value of 82 which was added a few lines up.
 console.log(lastNum);
 console.log(someArray);
+
+let numToString = 50;
+let newString = String(numToString);
+console.log(newString);
+console.log(typeof newString);
