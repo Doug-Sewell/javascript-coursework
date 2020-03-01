@@ -51,6 +51,18 @@ const thisWont = () => {
     Function expressions tend to be more popular, and the convention is to declare your function 
     expressions at the top of your code.
 </p>
+<h2>Default Values</h2>
+<p>Pass default values by not passing arguments and putting the value as a parameter in the function declaration. Example:
+</p>
+<pre><code>
+    const helloThere = (name = "Bob") => {
+        console.log(`Hello there ${name}`);
+    }
+    
+    helloThere('Jim');
+    helloThere();
+    //Console logs "Hello there Jim" the first time. Logs Bob the second time. 
+</code></pre>
     <script src="sandbox.js"></script>
 </body>
 
