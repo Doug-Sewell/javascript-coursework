@@ -1,0 +1,11 @@
+body {
+    font-family:'Lato';
+    background-color:#d3d3d3;
+    
+}
+
+pre {
+    background-color: gray;
+    border-radius:5px;
+    padding:5px;
+}
