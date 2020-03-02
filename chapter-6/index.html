@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>This Keyword</title>
 </head>
+
 <body>
     <h1>Using the "this" Keyword</h1>
-    <p>Using the "this" keyword allows us programmers to access data in the context of the current object. However, it's important to pay attention to ES5 vs ES6 notation.</p>
-    <p>In ES5, referring to "this" refers to the context of the object. However, in ES6 arrow functions, "this" will refer to the context in which it was created which in the following example is the window.</p>
-    <p>See the following example in how the code is implemented with the comments of what to expect to be logged to the console.</p>
+    <p>Using the "this" keyword allows us programmers to access data in the context of the current object. However, it's
+        important to pay attention to ES5 vs ES6 notation.</p>
+    <p>In ES5, referring to "this" refers to the context of the object. However, in ES6 arrow functions, "this" will
+        refer to the context in which it was created which in the following example is the window.</p>
+    <p>See the following example in how the code is implemented with the comments of what to expect to be logged to the
+        console.</p>
     <pre><code>
         const dogs = {
             legCount: 3,
@@ -43,6 +48,27 @@
         dogs.displaysWindow(); //Will log hte window object.
         dogs.showThisObject();
     </code></pre>
+    <h2>Common Methods with the Math Object</h2>
+    <p>Below are some examples and common methods of using the Math object that is built into JS as well as some common use cases:</p>
+    <pre>
+        <code>
+            console.log('Using Pi: ' + Math.PI);
+            const num = 37.28;
+            console.log('Rounded to the nearest number: ' + Math.round(num));
+            console.log('Rounds down: ' + Math.floor(num));
+            console.log('Rounds up: ' + Math.ceil(num));
+            console.log('Keeps the whole number and eliminates the decimals: ' + Math.trunc(num));
+
+            //Getting a random number.
+            console.log('Random number between zero and one: ' + Math.random()); 
+            console.log('Random number between zero and a hundred: ' + Math.random()*100);
+            console.log('Random number between zero and a hundred, but rounded to a whole number: ' + 
+            Math.round(Math.random()*100));
+
+        </code>
+    </pre>
+
     <script src="sandbox.js"></script>
 </body>
+
 </html>
