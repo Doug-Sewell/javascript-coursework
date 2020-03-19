@@ -1,74 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>This Keyword</title>
+    <title>Chapter 6</title>
 </head>
-
 <body>
-    <h1>Using the "this" Keyword</h1>
-    <p>Using the "this" keyword allows us programmers to access data in the context of the current object. However, it's
-        important to pay attention to ES5 vs ES6 notation.</p>
-    <p>In ES5, referring to "this" refers to the context of the object. However, in ES6 arrow functions, "this" will
-        refer to the context in which it was created which in the following example is the window.</p>
-    <p>See the following example in how the code is implemented with the comments of what to expect to be logged to the
-        console.</p>
+    <h1>DOM Manipulation</h1>
+    <p>An example of a link created with JS:</p>
+    <div class="createdWithJS"></div>
+
     <pre><code>
-        const dogs = {
-            legCount: 3,
-            names: ['Wrigley','Athena'],
-            makeSound() {
-                alert('Woof!');
-            },
-            displayNamesIncorrectly: () => {
-                console.log(this.names); 
-                
-                /*Looks for the value of names in the Window 
-                object which doesn't exist.*/
-            },
-            displayNames() {
-                console.log(this.names); 
-                
-                /*ES5 shorthand syntax which will refer to the names 
-                key in this object which holds the name names.*/
-            },
-            displaysWindow: () => {
-                console.log(this);
-            },
-            showThisObject() {
-                console.log(this);
-            }
-        }
-        
-        dogs.displayNamesIncorrectly(); //logs undefined.
-        dogs.displayNames(); //Logs the names correclty. 
-        dogs.displaysWindow(); //Will log hte window object.
-        dogs.showThisObject();
+        //In the HTML, we have this empty div:     
+        &lt;div class="createdWithJS"&gt;&lt;/div&gt;
+
+        //JS code:
+        document.querySelector('.createdWithJS').innerHTML = 
+        `&lt;p&gt;This is a paragraph created entirely with JS.&lt;/p&gt;
+        &lt;p&gt; We can do whatever we want like &lt;a href="https://www.google.com/" target="_blank"&gt;link to Google.&lt;/a&gt;&lt;/p&gt;`;
     </code></pre>
-    <h2>Common Methods with the Math Object</h2>
-    <p>Below are some examples and common methods of using the Math object that is built into JS as well as some common use cases:</p>
-    <pre>
-        <code>
-            console.log('Using Pi: ' + Math.PI);
-            const num = 37.28;
-            console.log('Rounded to the nearest number: ' + Math.round(num));
-            console.log('Rounds down: ' + Math.floor(num));
-            console.log('Rounds up: ' + Math.ceil(num));
-            console.log('Keeps the whole number and eliminates the decimals: ' + Math.trunc(num));
 
-            //Getting a random number.
-            console.log('Random number between zero and one: ' + Math.random()); 
-            console.log('Random number between zero and a hundred: ' + Math.random()*100);
-            console.log('Random number between zero and a hundred, but rounded to a whole number: ' + 
-            Math.round(Math.random()*100));
+    <h2>Getting attributes and setting attributes</h2>
+    <h3>Getting attributes</h3>
+    <p class="orange-bg" style="background-color:orange;">Background color of this text is blue.</p>
+    <p>We can also update attributes. For example, this text will have a span tag in the HTML to set the
+        text to have a background color of fuschia. However: <span class="background-to-change" style="background-color: fuchsia;">This text will have a background color of lime green despite the HTML using fuschia.</span>
+    </p>
+    <pre><code>
+        //Get attribute:
+        const orangeContent = document.querySelector('.orange-bg');
+        console.log(orangeContent.getAttribute('style'));
 
-        </code>
-    </pre>
 
-    <script src="sandbox.js"></script>
+        //Set attribute:
+        document.querySelector('.background-to-change').setAttribute('style','background-color: limegreen');
+    </code></pre>
+
+    <h2>Styling elements</h2>
+    <p class="purple-text" style="color:blue;">This paragraph is styled within the HTML to be the color blue. However, using the JS below we styled it to be purple. (Assume we gave this paragraph a class of "purple-text".) We also set the font size to be 20 pixels.</p>
+
+    <pre><code>
+        const purpleText = document.querySelector('.purple-text');
+        purpleText.style.color = 'purple';
+        purpleText.style.fontSize = '20px';
+    </code></pre>
+
+    <h2>Get a class List.</h2>
+    <p class = "these are all classes">THis paragraph has four classes.</p>
+    <pre><code>
+        //Get access to class list:
+        const classContent = document.querySelector('.these').classList;
+
+        //Add a class:
+        classContent.add('newClass');
+
+        //Remove a class:
+        classContent.remove('newClass');
+    </code></pre>
+
+    <h2>Toggle a class.</h2>
+    <p class="awesome">This class has a class of "awesome."</p>
+
+    <script src="code.js"></script>
 </body>
-
 </html>
